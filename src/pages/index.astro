@@ -13,18 +13,19 @@ import { Image } from 'astro:assets';
 
 
 <Layout title="Nicolas Torres 👋">
-	<main class="">
-		<div class="grid grid-flow-row grid-cols-2 justify-items-stretch mt-10 mb-15">
-			<div>
-				<h1 class="mt-20 ">Hi, I’m <span class="bg-gradient-to-r from-orange-300 from-20% via-amber-500 to-orange-700 inline-block text-transparent bg-clip-text">
-					Nicolas
-					</span>
-				</h1>
+	<main class="px-4">
+		<section class="text-slate-200 w-full mx-auto sm:w-[740px] pb-24" >
+			<div class="grid grid-flow-row grid-cols-2 justify-items-stretch mt-10 mb-15">
+				<div>
+					<h1 class="mt-20 text-center text-xl sm:text-4xl font-bold leading-4 lg:text-4xl">Hi, I’m <span class="bg-gradient-to-r from-orange-300 from-20% via-amber-500 to-orange-700 inline-block text-transparent bg-clip-text">
+						Nicolas
+						</span>
+					</h1>
+				</div>
+				<div class="col-span-1 ">
+					<Image class="size-40 rounded-full ms-auto shadow-lx dark:shadow-sky-400" src={PhotoMe} alt="image description"></Image>
+				</div>
 			</div>
-			<div class="col-span-1 ">
-				<Image class="size-40 rounded-full ms-auto shadow-lx dark:shadow-sky-400" src={PhotoMe} alt="image description"></Image>
-			</div>
-		</div>
 		<p class="mb-10 mt-10 p-3 text-center italic">
 			Greetings! 👋 I'm a junior <a class="text-orange-500">software developer</a> proficient in Java, JavaScript,<br/>
 			 Node, React, and Linux. My dedication to excellence and passion for staying 
@@ -33,18 +34,18 @@ import { Image } from 'astro:assets';
 			
 		</p>
 		
-		<div class=" mb-10 flex flex-row">
-				<div class="ml-3 outline outline-offset-0 outline-orange-300 rounded-full py-1 px-4 outline-1 flex flex-row">
-					<Icon class="iconcenter" name="mdi:linkedin" />
-					<a href="https://www.linkedin.com/in/nicolas-julian-torres-torres-0b0075198/" class=" text-slate-400"> LinkedIn</a>
+		<div class="size-8 m-1 mb-10 flex flex-row">
+				<div class="ml-1 items-center outline outline-offset-0 outline-orange-300 rounded-full py-1 px-4 outline-1 flex flex-row">
+					<Icon class="mr-1 size-6" name="mdi:linkedin" />
+					<a href="https://www.linkedin.com/in/nicolas-julian-torres-torres-0b0075198/" class=" text-slate-400 text-xs"> LinkedIn</a>
 				</div>
-				<div class="ml-3 outline outline-offset-0 outline-orange-300 rounded-full py-1 px-4 outline-1 flex flex-row">
-					<Icon class="iconcenter" name="mdi:github" />
-					<a href="https://github.com/JulianTorres1" class=" text-slate-400"> Github</a>
+				<div class="ml-3 outline items-center outline-offset-0 outline-orange-300 rounded-full py-1 px-4 outline-1 flex flex-row">
+					<Icon class="mr-1 size-6" name="mdi:github" />
+					<a href="https://github.com/JulianTorres1" class=" text-slate-400 text-xs"> Github</a>
 				</div>
-				<div class="ml-3 outline outline-offset-0 outline-orange-300 rounded-full py-1 px-4 outline-1 flex flex-row">
-					<Icon class="iconcenter" name="mdi:file-download" />
-					<a href="#" class=" text-slate-400"> Download CV</a>
+				<div class="ml-3 items-center outline outline-offset-0 outline-orange-300 rounded-full py-1 px-4 outline-1 flex flex-row">
+					<Icon class="mr-1 size-6" name="mdi:file-download" />
+					<a href="#" class=" text-slate-400 text-xs"> Download CV</a>
 				</div>
 		</div>
 
@@ -70,7 +71,7 @@ import { Image } from 'astro:assets';
 				body="I'm curruently working a diferent kind of project. :D"
 			/>
 		</ul>
-					
+		</section>			
 		<div class="mt-20" >
 			<Footer/>
 		</div>
@@ -80,7 +81,7 @@ import { Image } from 'astro:assets';
 </Layout>
 
 <style>
-	main {
+	.testmain {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -89,13 +90,7 @@ import { Image } from 'astro:assets';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: start;
-		margin-bottom: 1em;
-	}
+	
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -130,10 +125,5 @@ import { Image } from 'astro:assets';
 	.meimg {
 		height: 15rem;
 		width: 15rem;
-	}
-	.iconcenter {
-		margin-top: 5px;
-		margin-right: 6px;
-		
 	}
 </style>
