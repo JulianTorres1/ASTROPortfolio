@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import { Icon } from 'astro-icon/components';
 import Timeline from '../components/Timeline.astro';
+import Footer from '../components/Footer.astro';
 
 // Media
 import PhotoMe from '../Media/me.jpg';
@@ -69,8 +70,16 @@ import { Image } from 'astro:assets';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
-
-		<Timeline/>
+			
+			
+		<div class="mt-10">
+			<Timeline/>
+		</div>
+					
+		<div class="mt-20" >
+			<Footer/>
+		</div>
+		
 
 	</main>
 </Layout>
